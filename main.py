@@ -62,13 +62,13 @@ class Timer:
         self.hours = self.int_hours
         self.secs -= 1
         if self.secs == -1:
-            self.secs = 0
+            self.secs = 59
             self.mins -= 1
             if self.mins == -1:
-                self.mins = 0
+                self.mins = 59
                 self.hours -= 1
                 if self.hours == -1:
-                    self.hours = 0
+                    self.hours = 23
         return self.__str__
 
 
