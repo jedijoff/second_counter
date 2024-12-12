@@ -19,26 +19,22 @@ class Timer:
     def __str__(self):
         if self.hours < 10:
             self.__str__ = ("0" + str(self.hours))
-
         elif self.hours > 23:
             self.__str__ = "00"
         else:
             self.__str__ = str(self.hours)
-
         if self.mins < 10:
             self.__str__ += (":0" + str(self.mins))
         elif self.mins > 59:
             self.__str__ += ":00"
         else:
             self.__str__ += (":" + str(self.mins))
-
         if self.secs < 10:
             self.__str__ += (':0' + str(self.secs))
         elif self.secs > 59:
             self.__str__ += ':00'
         else:
             self.__str__ += ":" + str(self.secs)
-
         return (self.__str__)
 
     def next_second(self):
